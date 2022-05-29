@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div class="list-group">
+                        <a href="{{route('form.index',['data'=>''])}}" class="list-group-item list-group-item-action">Получить Пустые формы</a>
+                        <a href="{{route('form.index',['data'=>'true'])}}" class="list-group-item list-group-item-action">Получить Заполненые Формы</a>
+                    </div>
                 </div>
             </div>
         </div>

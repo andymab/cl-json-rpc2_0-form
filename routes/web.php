@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FormController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
+Route::get('/form', [FormController::class, 'index'])->name('form.index');
+Route::get('/form/{id}', [FormController::class, 'create'])->name('form.create');
+Route::post('/form/{id}', [FormController::class, 'store'])->name('form.store');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
