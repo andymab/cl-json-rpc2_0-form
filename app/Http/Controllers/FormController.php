@@ -46,8 +46,7 @@ class FormController extends Controller
      */
     public function create(Request $request)
     {
-        $forms = json_decode($this->put_server('getform',['form_id'=>$request->id]))->result;
-      //  dd(json_decode($forms->model));
+        $forms = json_decode($this->put_server('getform',['form_uid'=>$request->id]))->result;
         return view('form.create', compact('forms'));
     }
 

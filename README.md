@@ -20,6 +20,7 @@
 - cp .env.example .env
 - В .env установить базу данных, пароль, логин, MAIL_MAILER=log
 - php artisan migrate --seed
+- php artisan key:generate
 - php artisan serve
 # Пароли
 *login: admin@localhost password: admin*
